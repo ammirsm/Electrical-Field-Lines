@@ -43,6 +43,8 @@ footer{
 	position: absolute;
 	right: 2px;
 	color:#333745;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:9pt;
 }
 #mainheader{
 	margin: 81px auto 0 auto;
@@ -56,12 +58,25 @@ footer{
 #scroll{
 	margin: 200px 0 0;
 	text-align:center;
-	animation:myfirst 1s;
-	-webkit-animation:myfirst 1s;
+	animation:scrollme 0.5s linear infinite alternate;
+	-webkit-animation:scrollme 0.5s linear infinite alternate;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20pt;
 }
 .clear{
 	clear: both;
 }
 a{
 	text-decoration:none;
+}
+@keyframes scrollme{
+0% {transform: rotate(10deg);}
+50% {transform: rotate(0deg);	color:#ea2e49;}
+100% {transform: rotate(-10deg);}
+}
+
+@-webkit-keyframes scrollme{
+0% {-webkit-transform: rotate(10deg);}
+50% {-webkit-transform: rotate(0deg);color:#ea2e49;}
+100% {-webkit-transform: rotate(-10deg);}
 }

@@ -14,7 +14,8 @@ ul{
 li{
 	float: left;
 	margin-right: 57px;
-	padding-left: 2px;
+
+	font-family: 'Cantata One', serif;
 }
 li > a{
 	color:#ea2e49;
@@ -27,7 +28,7 @@ li > a:hover, li > a:active{
 
 li:last-child{
 	margin-right:0px;
-	padding-left: 3px;
+
 }
 li:hover{
 	padding:0px !important;
@@ -49,11 +50,14 @@ footer{
 	width: 996px;
 	height: 70px;
 	color:#333745;
-	font-size:45pt;
+	font-size:39pt;
+	font-family: 'Cantata One', serif;
 }
 #scroll{
 	margin: 200px 0 0;
 	text-align:center;
+	animation:myfirst 1s;
+	-webkit-animation:myfirst 1s;
 }
 .clear{
 	clear: both;

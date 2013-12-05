@@ -61,7 +61,7 @@ footer{
 	animation:scrollme 0.5s linear infinite alternate;
 	-webkit-animation:scrollme 0.5s linear infinite alternate;
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 20pt;
+	font-size: 30pt;
 }
 .clear{
 	clear: both;

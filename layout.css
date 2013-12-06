@@ -58,10 +58,11 @@ footer{
 #scroll{
 	margin: 200px 0 0;
 	text-align:center;
-	animation:scrollme 0.5s linear infinite alternate;
-	-webkit-animation:scrollme 0.5s linear infinite alternate;
+	animation:scrollme 0.6s linear infinite alternate;
+	-webkit-animation:scrollme 0.6s linear infinite alternate;
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 30pt;
+color:#ea2e49;
 }
 .clear{
 	clear: both;
@@ -70,13 +71,13 @@ a{
 	text-decoration:none;
 }
 @keyframes scrollme{
-0% {transform: rotate(10deg);}
-50% {transform: rotate(0deg);	color:#ea2e49;}
-100% {transform: rotate(-10deg);}
+0% {	margin: 195px 0 0;}
+50% {	margin: 200px 0 0;	color:#ea2e49;}
+100% {	margin: 215px 0 0;}
 }
 
 @-webkit-keyframes scrollme{
-0% {-webkit-transform: rotate(10deg);}
-50% {-webkit-transform: rotate(0deg);color:#ea2e49;}
-100% {-webkit-transform: rotate(-10deg);}
+0% {	margin: 185px 0 0;}
+50% {	margin: 200px 0 0;	color:#ea2e49;}
+100% {	margin: 215px 0 0;}
 }

@@ -20,7 +20,8 @@ $(document).ready(function () {
 		footerd= scrollTop/myHeight;
 		animation= 1-footerd;
 		$( "footer" ).css( "opacity", 1-footerd);
-		$("div#two").animate({left:(animation*myWidth)+'px'});
+		$( "div#two" ).css( "left", (animation*100)+'%').fadeIn( "slow" );
+		/*$("div#two").animate({left:(animation*myWidth)+'px'});*/
 		/*$( "ul#menu" ).css( "opacity", typedscroll );
 		$( "div#two" ).css( "opacity", x/100).fadeIn( "slow" );*/
 		/**/

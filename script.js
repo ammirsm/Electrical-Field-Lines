@@ -11,6 +11,6 @@ $( window ).scroll(function() {
   	$( "body" ).css( "overflow-y", "scroll" ).fadeIn( "slow" );
   	$( "div#two" ).css( "opacity", "1" ).fadeIn( "slow" );
   	$( "div#two" ).css( "top", "0%" );
-  	
+  	  $("div#two").animate({left:'0%'});
   }
 });

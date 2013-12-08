@@ -20,7 +20,14 @@ $(document).ready(function () {
 		footerd= scrollTop/myHeight;
 		animation= 1-footerd;
 		$( "footer" ).css( "opacity", 1-footerd);
+		$( "div#main" ).css( "opacity", 1-footerd);
 		$( "div#two" ).css( "left", (animation*100)+'%').fadeIn( "slow" );
+		if(scrollTop>=myHeight){
+			$( "div#headermenu" ).css( "opacity", footerd ).fadeIn( "slow" );
+		}
+		else{
+			$( "div#headermenu" ).css( "opacity", 0 ).fadeIn( "slow" );
+		}
 		/*$("div#two").animate({left:(animation*myWidth)+'px'});*/
 		/*$( "ul#menu" ).css( "opacity", typedscroll );
 		$( "div#two" ).css( "opacity", x/100).fadeIn( "slow" );*/

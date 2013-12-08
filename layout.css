@@ -3,7 +3,7 @@ body{
 	padding:0px;
 	background-image:url('/images/bg.png');
 	overflow-y: scroll;
-	
+	overflow-x: hidden;
 }
 ul{
 	list-style: none outside none;

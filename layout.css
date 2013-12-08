@@ -2,7 +2,7 @@ body{
 	margin:0px;
 	padding:0px;
 	background-image:url('/images/bg.png');
-	
+	overflow-y: scroll;
 	
 }
 ul{
@@ -86,41 +86,3 @@ a{
 			50% {	margin: 200px 0 0;}
 			100% {	margin: 215px 0 0;}
 }
-/*
-@keyframes menutop{
-	100%{
-			margin: 81px auto 0 auto;
-			text-align:center;
-			width: 996px;
-			height: 70px;
-			color:#333745;
-			font-size:39pt;
-			font-family: 'Cantata One', serif;
-	}
-	0%{
-			padding:0;
-			font-family: 'Cantata One', serif;
-			margin: 2px 0px 2px 100px;
-			font-size:20pt;
-			color:#333745;
-	}
-}
-*/
-/*@-webkit-keyframes menutop{
-	0%{
-			margin: 81px auto 0 auto;
-			text-align:center;
-			width: 996px;
-			height: 70px;
-			color:#333745;
-			font-size:39pt;
-			font-family: 'Cantata One', serif;
-	}
-	100%{
-			padding:0;
-			font-family: 'Cantata One', serif;
-			margin: 2px 0px 2px 100px;
-			font-size:20pt;
-			color:#333745;
-	}
-}*/

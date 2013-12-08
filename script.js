@@ -3,6 +3,8 @@ $(document).ready(function () {
  
     function init() {
         myHeight = $(window).height();
+        
+        myWidth = $(window).width();
     }
     init();
     $(window).resize(function () {
@@ -11,26 +13,22 @@ $(document).ready(function () {
 	    
 	x=0;
 	$( window ).scroll(function() {
-	  
-	  	
-	      var scrollTop = parseInt($(window).scrollTop());
-	      var scrolled = myHeight - scrollTop;
-	      var typedscroll = scrolled/myHeight;
-	      x= (scrollTop/myHeight)*100;
-	      x=Math.round (x);
-	      y=100-x;
-	      
-	      $( "footer" ).css( "opacity", scrolled/(myHeight-200) );
-	      $( "ul#menu" ).css( "opacity", typedscroll-0.75 );
+		var scrollTop = parseInt($(window).scrollTop());
+		headertop= scrollTop/288; /*The persent of the header top opacity*/
+		subject= scrollTop/400;
+		scrollme= scrollTop/600;
+		footerd= scrollTop/myHeight;
+		animation= 1-footerd;
+		$( "footer" ).css( "opacity", 1-footerd);
+		$("div#two").animate({left:(animation*myWidth)+'px'});
+		/*$( "ul#menu" ).css( "opacity", typedscroll );
+		$( "div#two" ).css( "opacity", x/100).fadeIn( "slow" );*/
+		/**/
+
 	  	/*$( "div#headermenu" ).css( "display", "block" ).fadeIn( "slow" );
 	  	$( "div#main" ).css( "display", "none" ).fadeOut( "slow" );
 	  	$( "body" ).css( "overflow-y", "scroll" ).fadeIn( "slow" );
 	  	
 	  	$( "div#two" ).css( "top", "0%" );*/
-	  	if (scrollTop>288){
-	  	$( "div#headermenu" ).css( "opacity", typedscroll).fadeIn( "slow" );
-	  	$( "div#two" ).css( "opacity", x/100).fadeIn( "slow" );
-	  	  $("div#two").animate({left:y+'%'});		}
-	  
-	});
+	  	});
 });

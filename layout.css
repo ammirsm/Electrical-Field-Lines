@@ -1,10 +1,13 @@
-body{
+body > div{
 	margin:0px;
 	padding:0px;
 	background-image:url('/images/bg.png');
-	overflow-y: scroll;
-	overflow-x: hidden;
-}
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+	overflow: hidden;
+	}
 ul{
 	list-style: none outside none;
 	margin:96.5px 14px 0 0;
@@ -46,7 +49,7 @@ li:hover{
 }
 footer{
 	bottom: 2px;
-	position: absolute;
+	position: fixed;
 	right: 2px;
 	color:#333745;
 	font-family: 'Ubuntu', sans-serif;
@@ -92,8 +95,14 @@ a{
 	100% {	margin: 215px 0 0;}
 }
 
-#two{
+#container > div{
 	height:100%;
+	width:100%;
+	padding: 0;
+	margin: 0;
+}
+#container{
 	position:absolute;
-	top:-100%;
+	top:0;
+	width:100%;
 }

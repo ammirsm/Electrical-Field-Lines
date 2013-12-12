@@ -61,7 +61,7 @@ function onPageChangeStart(pageNumber)
     }
 }
 
-function onPageChangeEnd(pageNumber)
+function onPageChangeEnd()
 {
 	
 }

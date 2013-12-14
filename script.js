@@ -74,7 +74,7 @@ function page(pageNumber){
 function onPageChangeStart(pageNumber)
 {
     if(pageNumber > 0){
-    	jQuery("#headermenu").animate({"opacity": "1"});
+    	jQuery("#headermenu").animate({"opacity": "0.5"});
     }
     else{
     	jQuery("#headermenu").animate({"opacity": "0"});

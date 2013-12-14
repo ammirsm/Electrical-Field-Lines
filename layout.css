@@ -1,47 +1,13 @@
 body > div{
 	margin:0px;
 	padding:0px;
-	background-image:url('/images/bg.png');
+	/*background-image:url('/images/bg.png');*/
+	background-color:#1C1919;
 	position:absolute;
 	width:100%;
 	top:0;
 	left:0;
 	overflow: hidden;
-	}
-ul{
-	list-style: none outside none;
-	margin:96.5px 14px 0 0;
-	padding:0;
-	float: right;
-	
-}
-li{
-	float: left;
-	margin-right: 57px;
-
-	font-family: 'Cantata One', serif;
-}
-li > a{
-	color:#ea2e49;
-}
-li > a:hover, li > a:active{
-	color:#333745;
-	text-decoration:underline;
-	font-weight: bold;
-}
-.activate{
-	color:#333745;
-
-	font-weight: bold;
-	color:#4E0611 !important;
-}
-li:last-child{
-	margin-right:0px;
-
-}
-li:hover{
-	padding:0px !important;
-	
 }
 #main{
 	width: 1024px;
@@ -51,20 +17,9 @@ footer{
 	bottom: 2px;
 	position: fixed;
 	right: 2px;
-	color:#333745;
+	color:#F0E7D7;
 	font-family: 'Ubuntu', sans-serif;
 	font-size:9pt;
-}
-#mainheader{
-	margin: 81px auto 0 auto;
-	text-align:center;
-	width: 996px;
-	height: 70px;
-	color:#333745;
-	font-size:39pt;
-	font-family: 'Cantata One', serif;
-	animation:menutop 1s ease 2s;
-	-webkit-animation:menutop 1s ease 2s;
 }
 #scroll{
 	margin: 200px 0 0;
@@ -73,15 +28,9 @@ footer{
 	-webkit-animation:scrollme 0.4s linear infinite alternate;
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 33pt;
-	color:#daedff;
+	color:#CED9F2;
 	font-weight: 700;
-	-webkit-text-stroke: 2px #77c4d3;	
-}
-.clear{
-	clear: both;
-}
-a{
-	text-decoration:none;
+	-webkit-text-stroke: 2px #4AADB9;	
 }
 @keyframes scrollme{
 	0% {	margin: 195px 0 0;}

@@ -30,7 +30,8 @@ body{
 	-webkit-transition: opacity 0.5s;
 	-moz-transition: opacity 0.5s;
 	-o-transition: opacity 0.5s;
-	z-index:2;	
+	z-index:2;
+	
 }
 #headermenu:hover{
 	opacity:1;
@@ -110,7 +111,8 @@ a{
 	font-family: 'Cantata One', serif;
 	animation:menutop 1s ease 2s;
 	-webkit-animation:menutop 1s ease 2s;
-}#secondqoute{
+}
+#secondqoute{
 	height: 268px;
     left: 50%;
     margin-left: -462px;

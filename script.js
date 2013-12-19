@@ -50,6 +50,7 @@ function init() {
     
     // Set height on the page.
 	jQuery("body > div").css("height", myHeight + "px");
+	jQuery(".absolute").css("height", myHeight + "px");
 	jQuery("#container > div").css("height", myHeight + "px");
 	
 }

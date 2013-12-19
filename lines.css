@@ -1,0 +1,43 @@
+.line{
+	background-image:url('images/2.png');
+	background-size:cover;
+}
+.linee{
+	background-image:url('images/3.png');
+	background-size:cover;
+}
+.negative{
+	background-image:url('images/-.png');
+	
+}
+.positive{
+	background-image:url('images/+.png');
+}
+.line_tr{
+	height: 134px;
+    left: 50%;
+    margin-left: 62px;
+    margin-top: -68px;
+    position: absolute;
+    top: 50%;
+    width: 10px;
+}
+.line_td{
+	height: 134px;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: 2px;
+    position: absolute;
+    top: 50%;
+    width: 10px;
+}
+.centered_field{
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:51px;
+	height:51px;
+	background-size:contain;
+	margin-top:-25px;
+	margin-left:-25px;
+}

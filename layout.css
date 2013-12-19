@@ -2,7 +2,7 @@ body{
 	margin:0px;
 	padding:0px;
 	background-image:url('/images/bg.png');
-	overflow-y: scroll;
+	overflow-y: hidden;
 	overflow-x: hidden;
 }
 ul{

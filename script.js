@@ -1,42 +1,117 @@
-$(document).ready(function () {
-    var myHeight;
-    
-    function init() {
-        myHeight = $(window).height();
-        
-        myWidth = $(window).width();
-    }
+jQuery(document).ready(function () {
+	    
+    // Get the page sizes.
     init();
-    $(window).resize(function () {
+    jQuery(window).resize(function () {
         init();
     });
-	    
-	x=0;
-	// $( window ).scroll(function(event) {
-		// var scrollTop = parseInt($(window).scrollTop());
-		// headertop= scrollTop/288; /*The persent of the header top opacity*/
-		// subject= scrollTop/400;
-		// scrollme= scrollTop/600;
-		// footerd= scrollTop/myHeight;
-		// animation= 1-footerd;
-		// $( "footer" ).css( "opacity", 1-footerd);
-		// $( "div#main" ).css( "opacity", 1-footerd);
-		// $( "div#two" ).css( "left", (animation*100)+'%').fadeIn( "slow" );
-		// if(scrollTop>=myHeight){
-			// $( "div#headermenu" ).css( "opacity", footerd ).fadeIn( "slow" );
-		// }
-		// else{
-			// $( "div#headermenu" ).css( "opacity", 0 ).fadeIn( "slow" );
-		// }
-		// /*$("div#two").animate({left:(animation*myWidth)+'px'});*/
-		// /*$( "ul#menu" ).css( "opacity", typedscroll );
-		// $( "div#two" ).css( "opacity", x/100).fadeIn( "slow" );*/
-		// /**/
-// 
-	  	// /*$( "div#headermenu" ).css( "display", "block" ).fadeIn( "slow" );
-	  	// $( "div#main" ).css( "display", "none" ).fadeOut( "slow" );
-	  	// $( "body" ).css( "overflow-y", "scroll" ).fadeIn( "slow" );
-// 	  	
-	  	// $( "div#two" ).css( "top", "0%" );*/
-	  	// });
+    
+    // Change page number when mouse wheel move.
+  	jQuery(window).mousewheel(function(event, delta, deltaX, deltaY){
+    	i = getPageNumber();
+    	// Select the page number.
+        if(deltaX<0){
+        	page (i+1);
+        }
+        else if (deltaX>0)
+        {
+        	page (i-1);
+        }
+        return false;
+    });
+	
+	// Change page number when some keys are pressed.
+	jQuery(window).keypress(function( event ) {
+		switch(event.keyCode){
+			case 40: // ArrowUp
+			case 34: // PageUp
+				page (getPageNumber()+1);
+				break;
+			case 38: // ArrowDown
+			case 33: // PageDown
+				page (getPageNumber()-1);
+				break;
+			case 35: //End
+				page (getNumberOfPages()-1);
+				break;
+			case 36: //Home
+				page (0);
+				break; 
+		}
+	});
+	
 });
+
+var myHeight;
+function init() {
+    // Get height and width.
+    myHeight = jQuery(window).height();    
+    myWidth = jQuery(window).width();
+    
+    // Set height on the page.
+	jQuery("body > div").css("height", myHeight + "px");
+	jQuery("#container > div").css("height", myHeight + "px");
+	
+}
+
+var isPageChanging = false;
+function page(pageNumber){
+	// To prevent changing the page during the animation.
+	if(isPageChanging)
+		return;
+	
+	// Limit page number.
+	if(pageNumber < 0 || pageNumber >= getNumberOfPages())
+		return;
+	
+	// Lock changing the page.
+	isPageChanging = true;
+	
+	jQuery("#container").animate({"top": -1 * pageNumber * myHeight + "px"}, 300, "swing", function () {isPageChanging = false; onPageChangeEnd()});
+	onPageChangeStart(pageNumber);
+}
+
+function onPageChangeStart(pageNumber)
+{
+    if(pageNumber > 0){
+    	jQuery("#headermenu").animate({"opacity": "0.5"});
+    }
+    else{
+    	jQuery("#headermenu").animate({"opacity": "0"});
+    }
+}
+
+function onPageChangeEnd()
+{
+	
+}
+
+function getPageNumber()
+{
+	// Get the page number.
+	var i;
+	b= parseInt(jQuery("#container").css("top"));
+	i= Math.round((-1 * b/ myHeight));
+	
+	return i;
+}
+
+function getNumberOfPages(){
+	// How many page are in our page.
+	return jQuery("#container > div").length;
+}
+
+// var pagination;
+// jQuery(document).ready(function () {
+	// pagination = new Pagination();
+	// pagination.onPageChangeStart = function(pageNumber)
+	// {
+	    // if(pageNumber > 0){
+	    	// jQuery("#headermenu").animate({"opacity": "1"});
+	    // }
+	    // else{
+	    	// jQuery("#headermenu").animate({"opacity": "0"});
+	    // }
+	// };
+	// pagination.apply();
+// });

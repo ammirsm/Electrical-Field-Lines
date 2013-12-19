@@ -1,3 +1,9 @@
+body{
+	padding:0px;
+	/*background-image:url('/images/bg.png');*/
+	background-color:#1C1919;
+	overflow: hidden;
+}
 #topmenu{
 	padding:0;
 	margin: 10px 26px 8px 26px;
@@ -6,13 +12,13 @@
 }
 #topheader{
 	padding:0;
-	font-family: 'Cantata One', serif;
+	font-family: 'Coda', serif;
 	margin: 2px 0px 2px 100px;
 	font-size:20pt;
-	color:#333745;
+	color:#4AAD7D;
 }
 #headermenu{
-	background-color:#edf1f4;
+	background-color:#403D3C;
 	padding:0;
 	margin:0;
 	position: fixed;
@@ -24,6 +30,9 @@
 	-moz-transition: opacity 0.5s;
 	-o-transition: opacity 0.5s;
 	z-index:2;
+	margin-left:-8px;
+	margin-top:-6px;
+	
 }
 #headermenu:hover{
 	opacity:1;
@@ -35,18 +44,82 @@ h2{
 }
 #firstqoute{
 	height: 268px;
-	width: 924px;
-	margin-left: -462px;
-	margin-top: -134px;
-	top: 50%;
-	left: 50%;
-	padding: 0;
-	position: absolute;
+    left: 50%;
+    margin-left: -462px;
+    margin-top: -134px;
+    position: absolute;
+    top: 50%;
+    width: 924px;
 }
 
 .qoute{
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 400;
 	font-size: 41pt;
-	color: #77c4d3;
+	color: #F0E7D7;
 }
+ul{
+	list-style: none outside none;
+	margin:96.5px 14px 0 0;
+	padding:0;
+	float: right;
+	
+}
+li{
+	float: left;
+	margin-right: 57px;
+
+	font-family: 'Coda', serif;
+}
+li > a{
+	color:#4AAD90;
+}
+li > a:hover, li > a:active{
+	color:#F0E7D7;
+	text-decoration:underline;
+	font-weight: bold;
+}
+.activate{
+	color:#F0E7D7;
+
+	font-weight: bold;
+	color:#4E0611 !important;
+}
+li:last-child{
+	margin-right:0px;
+
+}
+li:hover{
+	padding:0px !important;
+	
+}
+a{
+	text-decoration:none;
+}
+.absolute{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+.clear{
+	clear: both;
+}
+#mainheader{
+	margin: 81px auto 0 auto;
+	text-align:center;
+	width: 996px;
+	height: 70px;
+	color:#F0E7D7;
+	font-size:39pt;
+	font-family: 'Coda', serif;
+	animation:menutop 1s ease 2s;
+	-webkit-animation:menutop 1s ease 2s;
+}
+#secondqoute{
+	height: 268px;
+    left: 50%;
+    margin-left: -462px;
+    margin-top: -134px;
+    position: fixed;
+    top: 50%;
+    width: 924px;

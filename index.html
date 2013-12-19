@@ -11,46 +11,94 @@
 		<meta name="keywords" content="" />
 		<title>Visualization of Electrical Field Lines.</title>	
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="scrollHandler.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/mousewheel.js"></script>
+		<!--<script src="prototype.js" type="text/javascript"></script>-->
+		<!--<script src="Pagination.class.js" type="text/javascript"></script>-->
 		<script src="script.js" type="text/javascript"></script>
 		<style type="text/css">
-			@import "/layout.css";
-			@import url(http://fonts.googleapis.com/css?family=Cantata+One&subset=latin,latin-ext);
+			@import url(http://fonts.googleapis.com/css?family=Coda|Nova+Square|Codystar|Iceland|Finger+Paint|Caesar+Dressing);
 			@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+			@import "/layout.css";
 			@import "/header.css";
+			#three{
+				
+    			position: absolute;
+    			top:200%;
+			}
+			.centered_field{
+				background-image: url("/images/+.png");
+			    background-size: cover;
+			    height: 50px;
+			    left: 50%;
+			    margin-left: -25px;
+			    margin-top: -25px;
+			    position: absolute;
+			    top: 50%;
+			    width: 50px;
+			}
+			.line{
+				background-image: url("/images/2.png");
+			    background-size: contain;
+			}
+			.line_td{
+			    height: 134px;
+			    left: 50%;
+			    margin-left: -5px;
+			    position: absolute;
+			    top: 50%;
+			    width: 10px;
+				
+			}
 		</style>	
 	</head>
 	<body>
-		<!---Top header is here-->
-		<div id="headermenu" style="opacity:0;" >
-			<ul id="topmenu">
-				<li><a href="/about.html">Who am I?</a></li>
-				<li><a href="http://wikipedia.com/elf">Wiki</a></li>
-				<li><a href="/team.html">Team</a></li>
-			</ul>
-			<h1 id="topheader">Visualization of Electrical Field Lines</h1>
-		</div>
-		<!---Second Sence is here-->
-		<div id="two" style="width: 100%;height:100%;position: absolute;top:100%;left:100%;opacity: 1;">
-			<div id="secondsence" >
+		<div>
+			<!---Top header is here-->
+			<div id="headermenu" style="opacity: 0;">				<ul id="topmenu">
+					<li><a href="/about.html">Who am I?</a></li>
+					<li><a href="http://wikipedia.com/elf">Wiki</a></li>
+					<li><a href="/team.html">Team</a></li>
+				</ul>
+				<h1 id="topheader">Visualization of Electrical Field Lines</h1>
+			</div>
+			<div id="container">
+				<!-- Main Page is here-->
+				<div>
+					<div id="main">
+						<ul id="menu">
+							<li><a href="/about.html">Who am I?</a></li>
+							<li><a href="http://wikipedia.com/elf">Wiki</a></li>
+							<li><a href="/team.html">Team</a></li>
+						</ul>
 						<br class="clear" />
-				<div id="firstqoute" >
-					<h2 class="qoute">Hi, </br> I'm Sadatian. </br> I want to learn you how the electrical field affect eachother. </h2>
+						<h1 id="mainheader">Visualization of Electrical Field Lines</h1>
+						<div id="scroll">Scroll Me Down</div>
+						<footer>© 2013 learn for free</footer>
+					</div>
 				</div>
+				<!---Second Sence is here-->
+				<div id="two" class="absolute">
+					<div id="firstqoute" >
+						<h2 class="qoute">Hi, </br> I'm Sadatiyan. </br> I want to learn you how the electrical field affect eachother. </h2>
+					</div>
+				</div> 
+				<!-- Third Sence is Here -->
+				 <div id="three" class="absolute">
+					<div style="position: absolute; width:100%; height:100%;">
+						<div style="position: absolute; width:100%; height:100%;">
+							<div style="width: 134px; height: 10px; position: absolute; top: 50%; left: 50%; margin-top:-5px;  transform: translate(0px, -67px);">
+								<div class="line line_td" style="transform: rotate(90deg);"></div>
+							</div>
+							<div style="width: 134px; height: 10px; position: absolute; top: 50%; left: 50%; margin-top:-5px;  transform: translate(-134px, -67px);">
+								<div class="line line_td" style="transform: rotate(-90deg);"></div>
+							</div>
+							<div class="line line_td" style="transform: rotate(180deg);"></div>
+							<div class="line line_td" style="transform: translate(0,-134px);"></div>
+							<div class="centered_field"></div>
+						</div>
+					</div>
+				</div> 
 			</div>
 		</div>
-		<!-- Main Page is here-->
-		<div id="main">
-			<ul id="menu">
-				<li><a href="/about.html">Who am I?</a></li>
-				<li><a href="http://wikipedia.com/elf">Wiki</a></li>
-				<li><a href="/team.html">Team</a></li>
-			</ul>
-			<br class="clear" />
-			<h1 id="mainheader">Visualization of Electrical Field Lines</h1>
-			<div id="scroll">Scroll Me Down</div>
-			<footer>© 2013 learn for free</footer>
-		</div>
-		
 	</body>
 </html>

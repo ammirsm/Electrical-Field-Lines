@@ -1,6 +1,7 @@
 jQuery(document).ready(function () {
 	jQuery("#container").css("top", "0");  
-	jQuery("#quote_first").css("margin-left", "-3000px");  
+	jQuery("#quote_first").css("margin-left", "-3000px");
+	jQuery("#topheader").css("display", "none");    
     // Get the page sizes.
     init();
     jQuery(window).resize(function () {
@@ -57,16 +58,7 @@ function init() {
 var isPageChanging = false;
 function page(pageNumber){
 	// To prevent changing the page during the animation.
-    var paged = getPageNumber();
-    console.log(paged);
-    if(paged==1){
-    	jQuery("#topheader").css("opacity", "0");
-    	console.log("sucked");  
-    }
-    else{
-    	jQuery("#topheader").css("opacity", "1");
-    }
-	if(isPageChanging)
+    if(isPageChanging)
 		return;
 	
 	// Limit page number.
@@ -102,6 +94,13 @@ function onPageChangeStart(pageNumber)
 
 function onPageChangeEnd()
 {
+	var paged = getPageNumber();
+    if(paged==0){
+    	jQuery("#topheader").css("display", "none");  
+    }
+    else{
+    	jQuery("#topheader").css("display", "block");
+    }
 	
 }
 
@@ -110,8 +109,7 @@ function getPageNumber()
 	// Get the page number.
 	var i;
 	b= parseInt(jQuery("#container").css("top"));
-	i= Math.round((-1 * b/ myHeight));
-	
+	i= Math.round(((-1 * b)/ myHeight));
 	return i;
 }
 

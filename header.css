@@ -3,6 +3,7 @@ body{
 	/*background-image:url('/images/bg.png');*/
 	background-color:#1C1919;
 	overflow: hidden;
+	margin:0;
 }
 #topmenu{
 	padding:0;
@@ -30,19 +31,32 @@ body{
 	-moz-transition: opacity 0.5s;
 	-o-transition: opacity 0.5s;
 	z-index:2;
-	margin-left:-8px;
-	margin-top:-6px;
+	margin-top: -3px;
 	
 }
 #headermenu:hover{
+	opacity:1 !important;
+}
+#headermenu:hover + div #menu{
+	opacity:0;
+	transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+}
+#headermenu + div #menu{
 	opacity:1;
+	transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
 }
 h2{
 	margin:0;
 	padding: 0;
 	text-align:justify;
 }
-#firstqoute{
+.firstqoute{
 	height: 268px;
     left: 50%;
     margin-left: -462px;
@@ -53,7 +67,7 @@ h2{
 }
 
 .qoute{
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Play', sans-serif;
 	font-weight: 400;
 	font-size: 41pt;
 	color: #F0E7D7;
@@ -123,3 +137,4 @@ a{
     position: fixed;
     top: 50%;
     width: 924px;
+}

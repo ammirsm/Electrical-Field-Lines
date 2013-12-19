@@ -1,11 +1,11 @@
 jQuery(document).ready(function () {
-	    
+	jQuery("#container").css("top", "0");  
+	jQuery("#quote_first").css("margin-left", "-3000px");  
     // Get the page sizes.
     init();
     jQuery(window).resize(function () {
         init();
     });
-    
     // Change page number when mouse wheel move.
   	jQuery(window).mousewheel(function(event, delta, deltaX, deltaY){
     	i = getPageNumber();
@@ -19,7 +19,6 @@ jQuery(document).ready(function () {
         }
         return false;
     });
-	
 	// Change page number when some keys are pressed.
 	jQuery(window).keypress(function( event ) {
 		switch(event.keyCode){
@@ -58,6 +57,15 @@ function init() {
 var isPageChanging = false;
 function page(pageNumber){
 	// To prevent changing the page during the animation.
+    var paged = getPageNumber();
+    console.log(paged);
+    if(paged==1){
+    	jQuery("#topheader").css("opacity", "0");
+    	console.log("sucked");  
+    }
+    else{
+    	jQuery("#topheader").css("opacity", "1");
+    }
 	if(isPageChanging)
 		return;
 	
@@ -80,6 +88,16 @@ function onPageChangeStart(pageNumber)
     else{
     	jQuery("#headermenu").animate({"opacity": "0"});
     }
+    if(pageNumber == 1){
+    	jQuery("#quote_first").animate({"margin-left": "-462px"});
+    }
+    else if (pageNumber > 1){
+    	jQuery("#quote_first").animate({"margin-left": "+"+"3000px"});
+    }
+    else if (pageNumber < 1){
+    	jQuery("#quote_first").animate({"margin-left": "-"+"3000px"});
+    }
+    
 }
 
 function onPageChangeEnd()

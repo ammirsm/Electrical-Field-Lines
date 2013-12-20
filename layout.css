@@ -56,3 +56,11 @@ footer{
 	top:0;
 	width:100%;
 }
+#background{
+	background-image: url("images/zwartevilt.png");
+    height: 100%;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    z-index:0;
+}

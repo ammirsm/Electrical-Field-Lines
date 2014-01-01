@@ -2,7 +2,6 @@ jQuery(document).ready(function () {
 	jQuery("#container").css("top", "0");  
 	jQuery("#quote_first").css("margin-left", "-3000px");
 	jQuery("#topheader").css("display", "none");    
-	
     // Get the page sizes.
     init();
     jQuery(window).resize(function () {
@@ -53,6 +52,7 @@ function init() {
 	jQuery("body > div").css("height", myHeight + "px");
 	jQuery(".absolute").css("height", myHeight + "px");
 	jQuery("#container > div").css("height", myHeight + "px");
+	
 	
 }
 

@@ -91,10 +91,10 @@ function onPageChangeStart(pageNumber)
     else if (pageNumber < 1){
     	jQuery("#quote_first").animate({"margin-left": "-"+"3000px"});
     }
-    if (pageNumber==2 || pageNumber==3){
+    /*if (pageNumber==2 || pageNumber==3){
 		jQuery("#background").animate({"opacity": "0.2"});
 		jQuery("#background").css("background-image", "url('images/pattern1.png')");
-    }
+    }*/
     else{
 		jQuery("#background").animate({"opacity": "1"});
 		jQuery("#background").css("background-image", "url('images/zwartevilt.png')");

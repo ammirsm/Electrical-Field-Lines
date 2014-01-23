@@ -12,16 +12,17 @@ jQuery(document).ready(function () {
     	i = getPageNumber();
     	// Select the page number.
         if(deltaX<0){
-        	page (i+1);
+        	page (i-1);
         }
         else if (deltaX>0)
         {
-        	page (i-1);
+        	page (i+1);
         }
         return false;
     });
 	// Change page number when some keys are pressed.
 	jQuery(window).keypress(function( event ) {
+		console.log(event.keyCode);
 		switch(event.keyCode){
 			case 40: // ArrowUp
 			case 34: // PageUp

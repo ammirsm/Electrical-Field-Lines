@@ -92,6 +92,13 @@ function onPageChangeStart(pageNumber)
     	jQuery("#quote_first").animate({"margin-left": "-"+"3000px"});
     }
     if (pageNumber==2){
+    			jQuery(".fixed").animate({"right": "-500px"});
+    		jQuery("#des1").css("right", "-500px");
+			jQuery("#des1").css("display", "block");
+			jQuery("#des1").animate({"right": "0"});
+    }
+    else if(pageNumber==3){
+    			jQuery(".fixed").animate({"right": "-500px"});
     		jQuery("#des2").css("right", "-500px");
 			jQuery("#des2").css("display", "block");
 			jQuery("#des2").animate({"right": "0"});

@@ -21,8 +21,8 @@ jQuery(document).ready(function () {
         return false;
     });
 	// Change page number when some keys are pressed.
-	jQuery(window).keypress(function( event ) {
-		console.log(event.keyCode);
+	jQuery(window).keydown(function( event ) {
+		
 		switch(event.keyCode){
 			case 40: // ArrowUp
 			case 34: // PageUp
@@ -39,7 +39,7 @@ jQuery(document).ready(function () {
 				page (0);
 				break; 
 		}
-	});
+		});
 	
 });
 

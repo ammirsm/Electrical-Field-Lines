@@ -84,15 +84,20 @@ function onPageChangeStart(pageNumber)
     }
     if(pageNumber == 1){
     	jQuery("#quote_first").animate({"margin-left": "-462px"});
+    	jQuery(".fixed").animate({"right": "-500px"});
     }
     else if (pageNumber > 1){
     	jQuery("#quote_first").animate({"margin-left": "+"+"3000px"});
-    	
+    	jQuery(".fixed").animate({"right": "-500px"});
+    	jQuery("#des_"+pageNumber).css("right", "-500px");
+			jQuery("#des_"+pageNumber).css("display", "block");
+			jQuery("#des_"+pageNumber).animate({"right": "0"});
     }
     else if (pageNumber < 1){
     	jQuery("#quote_first").animate({"margin-left": "-"+"3000px"});
+    	jQuery(".fixed").animate({"right": "-500px"});
     }
-    if (pageNumber==2){
+    /*if (pageNumber==2){
     			jQuery(".fixed").animate({"right": "-500px"});
     		jQuery("#des1").css("right", "-500px");
 			jQuery("#des1").css("display", "block");
@@ -106,7 +111,7 @@ function onPageChangeStart(pageNumber)
     }
     else{
 		jQuery(".fixed").animate({"right": "-500px"});
-     }
+     }*/
 }
 
 function onPageChangeEnd()

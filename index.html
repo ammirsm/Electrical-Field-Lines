@@ -22,15 +22,39 @@ The default file of the project.
 			@import "layout.css";
 			@import "header.css";
 			@import "lines.css";
-			#five_pic{
+			.pic {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				background-size: cover;
+			}
+			#five_pic {
 				background-image: url('/images/pics/5.png');
 				width: 600px;
 				height: 315px;
-				position: absolute;
 				margin-left: -300px;
-				margin-top: -157px;
-				top: 50%;
-				left: 50%;
+				margin-top: -158px;
+			}
+			#six_pic{
+				background-image: url('/images/pics/6.png');
+				width: 288px;
+				height: 286px;
+				margin-left: -144px;
+				margin-top: -143px;
+			}
+			#seven_pic{
+				background-image: url('/images/pics/4.png');
+				width: 342px;
+				height: 252px;
+				margin-left: -144px;
+				margin-top: -143px;
+			}
+			#eight_pic{
+				background-image: url('/images/pics/3.png');
+				width: 374px;
+				height: 257px;
+				margin-left: -187px;
+				margin-top: -127px;
 			}
 		</style>
 	</head>
@@ -155,13 +179,44 @@ The default file of the project.
 					</div>
 					<div class="absolute">
 						<div class="absolute">
-					
-					<div id="five_pic">
-
-					</div>
-					</div>
+							<div id="five_pic" class="pic"></div>
+						</div>
 					</div>
 				</div>
+				<div id="six" >
+					<div class="fixed" id="des_5">
+						Description of second picture is here.
+					</div>
+					<div class="absolute">
+						<div class="absolute">
+							<div id="six_pic" class="pic"></div>
+						</div>
+					</div>
+				</div>
+				<div id="seven" >
+					<div class="fixed" id="des_6">
+						Description of second picture is here.
+					</div>
+					<div class="absolute">
+						<div class="absolute">
+							<div id="seven_pic" class="pic"></div>
+						</div>
+					</div>
+				</div>
+				<div id="eight" >
+					<div class="fixed" id="des_7">
+						Description of second picture is here.
+					</div>
+					<div class="absolute">
+						<div class="absolute">
+							<div id="eight_pic" class="pic"></div>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
 			</div>
 		</div>
 	</body>

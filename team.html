@@ -17,7 +17,7 @@ The default file of the project.
 			@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
 			@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Play);
 			@import "/header.css";
-			 
+
 			/*#main {
 			 width: 1024px;
 			 margin: auto;
@@ -31,14 +31,19 @@ The default file of the project.
 			body {
 				font-family: "Coda", serif;
 				font-weight: normal;
-    font-style: normal;
+				font-style: normal;
 			}
 			.image {
 				width: 100px;
 				float: left;
 				padding: 10px;
 				border-radius: 50%;
-				padding-left: 0px;
+				transition: all 0.5s;
+				-webkit-transition: all 0.5s;
+			}
+			.image:hover {
+				width: 105px;
+				padding: 5px;
 			}
 			.description {
 				margin-top: 35px;
@@ -54,13 +59,55 @@ The default file of the project.
 				color: #4AAD7D;
 			}
 			#row {
-				height: 253px;
+				height: 286px;
 				width: 1024px;
 				margin-left: -512px;
-				margin-top: -127px;
+				margin-top: -143px;
+				margin-top: -143px;
 				position: absolute;
 				top: 50%;
 				left: 50%;
+			}
+			.icon {
+				width: 32px;
+				height: 32px;
+				float: left;
+				margin: 5px;
+			}
+			.social {
+				margin: auto;
+				width: 173px;
+			}
+			#facebook:hover, #github:hover, #twitter:hover, #website:hover {
+
+				opacity: 1;
+			}
+			#facebook {
+				background-image: url('/images/PNG/circular/facebook_32.png');
+				opacity: 0.8;
+				transition: all 0.5s;
+				-webkit-transition: all 0.5s;
+			}
+			#github {
+
+				background-image: url('/images/PNG/circular/github_32.png');
+				opacity: 0.8;
+				transition: all 0.5s;
+				-webkit-transition: all 0.5s;
+			}
+			#twitter {
+
+				background-image: url('/images/PNG/circular/twitter_32.png');
+				opacity: 0.8;
+				transition: all 0.5s;
+				-webkit-transition: all 0.5s;
+			}
+			#website {
+
+				background-image: url('/images/PNG/circular/rss_32.png');
+				opacity: 0.8;
+				transition: all 0.5s;
+				-webkit-transition: all 0.5s;
 			}
 		</style>
 	</head>
@@ -95,10 +142,16 @@ The default file of the project.
 					<div style="color:#F0E7D7;">
 						Amir is a web-developer who is helping us to build this website and start LFF foundation. He lives in Karaj and is studying in Shahid Soltani High School (National Organization for Development of Exceptional Talents).
 					</div>
+					<div class="clear"></div>
+					<div class="social">
+						<a href="https://facebook.com/amir.saeidmehr"><div class="icon" id="facebook"></div></a>
+						<a href="https://twitter.com/ammirsm"><div class="icon" id="twitter"></div></a>
+						<a href="https://amir.saeidmehr.ir"><div class="icon" id="website"></div></a>
+						<a href="https://github.com/ammirsm"><div class="icon" id="github"></div></a>
+					</div>
 				</div>
-
 				<div class="picture">
-					<img src="/images/amir1.jpg" class="image">
+					<img src="/images/amir.jpg" class="image">
 					<div class="description">
 						<span class="name"><strong> Amir Hossein Saeid Mehr </strong></span>
 						</br>
@@ -109,10 +162,17 @@ The default file of the project.
 					<div style="color:#F0E7D7;">
 						Amir is a web-developer who is helping us to build this website and start LFF foundation. He lives in Karaj and is studying in Shahid Soltani High School (National Organization for Development of Exceptional Talents).
 					</div>
+					<div class="clear"></div>
+					<div class="social">
+						<a href="https://facebook.com/amir.saeidmehr"><div class="icon" id="facebook"></div></a>
+						<a href="https://twitter.com/ammirsm"><div class="icon" id="twitter"></div></a>
+						<a href="https://amir.saeidmehr.ir"><div class="icon" id="website"></div></a>
+						<a href="https://github.com/ammirsm"><div class="icon" id="github"></div></a>
+					</div>
 				</div>
 
 				<div class="picture">
-					<img src="/images/amir2.jpg" class="image">
+					<img src="/images/amir.jpg" class="image">
 					<div class="description">
 						<span class="name"><strong> Amir Hossein Saeid Mehr </strong></span>
 						</br>
@@ -122,6 +182,13 @@ The default file of the project.
 					<div class="clear"></div>
 					<div style="color:#F0E7D7;">
 						Amir is a web-developer who is helping us to build this website and start LFF foundation. He lives in Karaj and is studying in Shahid Soltani High School (National Organization for Development of Exceptional Talents).
+					</div>
+					<div class="clear"></div>
+					<div class="social">
+						<a href="https://facebook.com/amir.saeidmehr"><div class="icon" id="facebook"></div></a>
+						<a href="https://twitter.com/ammirsm"><div class="icon" id="twitter"></div></a>
+						<a href="https://amir.saeidmehr.ir"><div class="icon" id="website"></div></a>
+						<a href="https://github.com/ammirsm"><div class="icon" id="github"></div></a>
 					</div>
 				</div>
 

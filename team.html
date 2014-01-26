@@ -38,12 +38,24 @@ The default file of the project.
 				float: left;
 				padding: 10px;
 				border-radius: 50%;
-				transition: all 0.5s;
-				-webkit-transition: all 0.5s;
+				
+				-webkit-transition: all 400ms ease-in-out;
+				-moz-transition: all 400ms ease-in-out;
+				transition: all 400ms ease-in-out;
+				-webkit-filter: grayscale(95%);
+				-moz-filter: grayscale(95%);
+				-ms-filter: grayscale(95%);
+				-o-filter: grayscale(95%);
+				filter: grayscale(95%);
+				filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id…ale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale");
+				filter: gray;
 			}
 			.image:hover {
-				width: 105px;
-				padding: 5px;
+				-webkit-filter: none;
+				-moz-filter: none;
+				-ms-filter: none;
+				-o-filter: none;
+				filter: none;
 			}
 			.description {
 				margin-top: 35px;
@@ -131,7 +143,7 @@ The default file of the project.
 		<div class="absolute" id="main" style="">
 			<div id="row">
 				<div class="picture">
-					<img src="/images/amir.jpg" class="image">
+					<img src="/images/amir1.jpg" class="image">
 					<div class="description">
 						<span class="name"><strong> Amir Hossein Saeid Mehr </strong></span>
 						</br>
@@ -151,7 +163,7 @@ The default file of the project.
 					</div>
 				</div>
 				<div class="picture">
-					<img src="/images/amir.jpg" class="image">
+					<img src="/images/amir2.jpg" class="image">
 					<div class="description">
 						<span class="name"><strong> Amir Hossein Saeid Mehr </strong></span>
 						</br>
@@ -172,7 +184,7 @@ The default file of the project.
 				</div>
 
 				<div class="picture">
-					<img src="/images/amir.jpg" class="image">
+					<img src="/images/amir1.jpg" class="image">
 					<div class="description">
 						<span class="name"><strong> Amir Hossein Saeid Mehr </strong></span>
 						</br>
